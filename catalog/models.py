@@ -15,6 +15,16 @@ class Genre(models.Model):
         """String for representing the Model object."""
         return self.name
 
+class Language(models.Model):
+    """Model representing a book's language"""
+    name = models.CharField(
+        max_length=200,
+        help_text='Enter the book language'
+    )
+
+    def __str__(self):
+        """String for representing the Model object"""
+        return self.name
 class Book(models.Model):
     """Model representing a book (but not a specific copy of a book)."""
     title = models.CharField(max_length=200)
